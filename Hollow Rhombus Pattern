@@ -1,0 +1,50 @@
+Given number of rows N, you have to print a Hollow Rhombus. See the output for corresponding given input.
+
+Input Format
+Single integer N.
+
+Constraints
+N <= 20
+
+Output Format
+Print pattern.
+
+Sample Input
+5
+Sample Output
+    *****
+   *   *
+  *   *
+ *   *
+*****
+Explanation
+For any input N. First line contains 4 space and then 5 {*} and then the second line contains according to the output format.
+
+
+#include<iostream>
+using namespace std;
+int main() {
+
+	 int i,j,rows;
+    
+    cin>>rows;
+     
+    
+    for(i=1; i<=rows; i++){//outer for loop
+   for(j=1; j<=rows-i; j++){//inner for loop
+   cout<<" ";//print space
+   }
+   for(j=1; j<=rows; j++){//inner for loop
+   if(i==1 || i==rows || j==1 || j==rows){
+   cout<< "*";//print symbol after space
+   }
+   else{
+       cout<<" ";//print space
+   }
+}
+ cout<< endl;//move to next line
+}
+
+    return 0;
+}
+
